@@ -1,9 +1,9 @@
 function Letter(letter) {
   this.letter = letter;
-  this.guess = false;
+  this.guessed = false;
 
   this.display = function() {
-    if (this.guess === true) {
+    if (this.guessed === true) {
       return this.letter;
     } else {
       return "_";
@@ -11,7 +11,7 @@ function Letter(letter) {
   };
   this.checkLetter = function(guess) {
     if (guess === this.letter) {
-      this.guess = true;
+      this.guessed = true;
     } else {
       return false;
     }
